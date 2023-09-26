@@ -185,13 +185,13 @@ header h1 {
 
 .image {
   object-fit: contain;
-  margin-top: 10px;
+
   -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRjAwNjYiIGQ9Ik00OC4zLC00OC4xQzY0LjEsLTMyLjUsNzkuNCwtMTYuMyw4MS43LDIuM0M4NC4xLDIwLjksNzMuNCw0MS45LDU3LjYsNTYuNUM0MS45LDcxLjEsMjAuOSw3OS4zLDEuMSw3OC4zQy0xOC44LDc3LjIsLTM3LjYsNjYuOCwtNDkuMiw1Mi4yQy02MC43LDM3LjYsLTY1LDE4LjgsLTYzLjUsMS41Qy02MS45LC0xNS43LC01NC41LC0zMS40LC00MywtNDdDLTMxLjQsLTYyLjYsLTE1LjcsLTc4LDAuMywtNzguM0MxNi4zLC03OC42LDMyLjUsLTYzLjcsNDguMywtNDguMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K");
 }
 
 .scroll__down {
   position: absolute;
-  right: -2.3rem;
+  right: -2rem;
   bottom: 5rem;
   transform: rotate(90deg);
   font-weight: 300;
@@ -221,7 +221,20 @@ header h1 {
 
 .image {
   width: 400px;
-  margin-top: -50px;
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 970px) and (min-width: 604px) {
+  .image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .image {
+    width: 330px;
+    margin-top: 40px;
+  }
 }
 
 /* ------ nav ------*/
@@ -242,11 +255,7 @@ nav {
   border-radius: 3rem;
   backdrop-filter: blur(15px);
 }
-@media screen and (max-width: 970px) and (min-width: 604px) {
-  .image {
-    display: none;
-  }
-}
+
 nav a {
   background: transparent;
   padding: 0.9rem;
